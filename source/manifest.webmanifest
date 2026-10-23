@@ -1,0 +1,16 @@
+{
+  "name": "Fuel Log",
+  "short_name": "Fuel Log",
+  "description": "Pencatat kalori, olahraga, air, dan puasa. Bisa dipakai tanpa sinyal.",
+  "lang": "id",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#111613",
+  "theme_color": "#111613",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
