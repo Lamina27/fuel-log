@@ -247,6 +247,8 @@ document.addEventListener('click', async ev => {
     await saveDay(day); renderToday();
     toast(t('toast_act_type', { x: typeLabel(v) }), { fn: async () => { const d = await getDay(date); const y = d.acts.find(x => x.id === a.id); if (y) { y.type = prev; await saveDay(d); if (S.date === date) renderToday(); } } });
   }
+  else if (act === 'aiKeySave') saveApiKey();
+  else if (act === 'aiKeyDel') deleteApiKey();
   else if (act === 'backup') exportBackup();
   else if (act === 'restoreGo') restoreBackup();
   else if (act === 'restoreCancel') { S.restore = null; renderProf(); }
@@ -342,6 +344,7 @@ async function init() {
   S.downloads = downloads || null;
   if (sample === undefined) pSample.then(async s => { if (!s) return; await setSample(s); if (S.mode !== 'loading') render(); });
   if (downloads === undefined) pDl.then(d => { if (!d) return; S.downloads = d; if (S.mode !== 'loading') render(); });
+  if (!S.sample && STANDALONE) await useApiSample();   // versi offline: AI lewat API key sendiri bila ada
   const id = user ? await user.id() : null;
   if (db && id) { S.db = db; S.uid = id; S.mode = 'cloud'; } else { S.mode = 'local'; S.localWhy = 'nodb'; }
   // Pengunjung link publik tidak boleh menulis ke akun: pakai simpanan perangkat sejak awal.

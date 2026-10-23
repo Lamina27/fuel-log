@@ -4,7 +4,7 @@
    - Ikon & manifest: simpanan dulu.
    - Google Fonts: dipakai dari simpanan bila ada, diperbarui di belakang layar. Tanpa font, memakai font sistem.
    Catatan pengguna TIDAK disimpan di sini — ada di localStorage browser. */
-const VERSION = '9db8722649';
+const VERSION = 'fab40d03e1';
 const APP = 'fuel-log-app-' + VERSION;
 const FONTS = 'fuel-log-fonts';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];

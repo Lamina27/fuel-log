@@ -7,7 +7,8 @@ function typeOptions(sel) { return TYPE_KEYS.map(k => `<option value="${k}"${k =
 // Kenapa AI tidak tampil: versi offline, salinan di luar Claude, atau Claude tidak memberi AI di tampilan ini.
 function noAiNote(kind) {
   const link = `<a href="${CLAUDE_URL}" target="_blank" rel="noopener">${t('open_claude_ver')}</a>`;
-  if (STANDALONE || !S.hasClaude) return `<div class="note info">${t(kind === 'food' ? 'ai_offline_food' : 'ai_offline_shot')} ${link}</div>`;
+  if (STANDALONE) return `<div class="note info">${t(kind === 'food' ? 'ai_byok_food' : 'ai_byok_shot')} <a href="#" data-act="go" data-v="prof">${t('ai_byok_go')}</a> · ${link}</div>`;
+  if (!S.hasClaude) return `<div class="note info">${t(kind === 'food' ? 'ai_offline_food' : 'ai_offline_shot')} ${link}</div>`;
   return `<div class="note info">${t(kind === 'food' ? 'ai_unavail_food' : 'ai_unavail_shot')}</div>`;
 }
 function renderLog() {

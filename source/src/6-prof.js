@@ -93,10 +93,11 @@ function renderProf() {
       </ol>
     </div>
 
+    ${STANDALONE ? apiKeyCard() : ''}
     <div class="card">
       <h2>${t('storage')}</h2>
       <p class="hint">${S.mode === 'cloud' ? t('storage_cloud') : STANDALONE ? t('storage_offline') : t('storage_local') + ' ' + t(S.localWhy === 'nowrite' ? 'storage_nowrite' : 'storage_nodb')}</p>
-      <p class="hint statusline">${STANDALONE ? t('st_offline_ver') + ' · ' : ''}Claude ${S.hasClaude ? '✓' : '—'} · ${t('st_account')} ${S.mode === 'cloud' ? '✓' : '—'} · AI ${S.sample ? '✓' : '—'} · ${t('st_photo')} ${S.img ? '✓' : '—'}</p>
+      <p class="hint statusline">${STANDALONE ? t('st_offline_ver') + ' · ' : ''}Claude ${S.hasClaude ? '✓' : '—'} · ${t('st_account')} ${S.mode === 'cloud' ? '✓' : '—'} · AI ${S.sample ? (S.sample.viaApi ? '✓ (API ' + esc((AI_MODELS[S.sample.model] || {}).label || '') + ')' : '✓') : '—'} · ${t('st_photo')} ${S.img ? '✓' : '—'}</p>
     </div>
     ${backupCard()}`;
 }

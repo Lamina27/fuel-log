@@ -326,6 +326,11 @@ function aiErr(e) {
     case 'refused': return t('ai_refused');
     case 'invalid_json': case 'empty_completion': return t('ai_incomplete');
     case 'prompt_too_large': return t('ai_too_long');
+    case 'bad_key': return t('ai_key_bad');
+    case 'no_credit': return t('ai_no_credit');
+    case 'offline': return t('ai_offline');
+    case 'network': return t('ai_network');
+    case 'overloaded': return t('ai_overloaded');
     default: return t('ai_failed');
   }
 }

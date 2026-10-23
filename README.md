@@ -14,7 +14,10 @@ Ini **versi offline** (aplikasi web yang bisa dipasang di layar utama). Setelah 
 ## Yang perlu diketahui
 
 - **Data tersimpan di browser HP-mu sendiri**, tidak dikirim ke mana pun. Menghapus data browser atau ganti HP = data hilang, jadi pakai **Profil → Cadangan data → Simpan cadangan** sesekali.
-- **Fitur AI** (foto makanan, membaca screenshot Strava/Hevy/Garmin, rekap harian) butuh internet dan Claude, jadi tidak ada di versi ini. Pakai versi Claude: https://claude.ai/artifact/2MXYqDfn8A3EBG4rj16goj
+- **Fitur AI** (foto makanan, membaca screenshot Strava/Hevy/Garmin, rekap harian) tidak bawaan di versi ini. Dua pilihan:
+  1. **API key sendiri:** Profil → *AI pakai API key sendiri* → tempel kunci Claude API ([cara membuat](https://platform.claude.com/docs/en/get-api-key)) → *Simpan & uji*. Kunci hanya disimpan di browser HP-mu dan tidak ikut cadangan. Biaya ditagih ke akun API-mu (terpisah dari langganan Claude): ±$0,009 per foto dengan Sonnet 5.5, ±$0,0005 dengan Haiku 5.5. Foto diperkecil ke ≤1.568 px sebelum dikirim. Butuh internet saat dipakai.
+  2. **Versi Claude:** https://claude.ai/artifact/2MXYqDfn8A3EBG4rj16goj (memakai akun Claude).
+- **Jangan bagikan API key-mu.** Siapa pun yang memegangnya bisa memakai saldomu.
 - File cadangan sama formatnya di kedua versi: simpan di satu versi, pulihkan di versi lain. Pemulihan **menggabungkan** data, tidak menghapus.
 - Angka di aplikasi adalah **perkiraan, bukan nasihat medis**. Target makan tidak pernah di bawah 1.200 kkal (perempuan) / 1.500 kkal (laki-laki); usia di bawah 18 tahun hanya mendapat target pemeliharaan.
 
